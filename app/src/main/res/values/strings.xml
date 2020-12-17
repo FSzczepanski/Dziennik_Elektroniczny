@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">DziennikElektroniczny</string>
+    <string name="register_link_text">Register</string>
+    <string name="forgot_password">nie pamiętam hasła</string>
+    <string name="login">login</string>
+    <string name="password">hasło</string>
+    <string name="email">email</string>
+    <string name="AppName">Mój Dziennik</string>
+    <string name="logout">Logout</string>
 </resources>

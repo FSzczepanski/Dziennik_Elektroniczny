@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "449404564604",
+    "project_id": "dziennikelektroniczny",
+    "storage_bucket": "dziennikelektroniczny.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:449404564604:android:082bb23f9ad42026df85f9",
+        "android_client_info": {
+          "package_name": "com.example.dziennikelektroniczny"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "449404564604-n6j61mh320vri4thekpuc9l6d6u6a7rh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dziennikelektroniczny",
+            "certificate_hash": "2f59069e38fcc3dbec835ccb20c2d371ef558496"
+          }
+        },
+        {
+          "client_id": "449404564604-4t6c8mcspo3c3qh3387hqtvmitqqss8r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0p4nQtJoZrrjrN6hkQh1HAGQePIIIbuk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "449404564604-4t6c8mcspo3c3qh3387hqtvmitqqss8r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
