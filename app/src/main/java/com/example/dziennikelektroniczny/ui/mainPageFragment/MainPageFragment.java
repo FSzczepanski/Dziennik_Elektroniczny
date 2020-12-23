@@ -1,5 +1,6 @@
 package com.example.dziennikelektroniczny.ui.mainPageFragment;
 
+import androidx.fragment.app.DialogFragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -48,10 +49,7 @@ public class MainPageFragment extends Fragment {
         navigate(root);
         this.mViewModel = new ViewModelProvider(this).get(MainPageViewModel.class);
         subjectRecycler = root.findViewById(R.id.subjectsRecyclerView);
-
-
-
-
+        showAddSubjectDialog(root);
         return root;
     }
 
@@ -91,7 +89,16 @@ public class MainPageFragment extends Fragment {
 
     }
 
-
+    public void showAddSubjectDialog(View view) {
+        Button buttonAddSubject = view.findViewById(R.id.addNewButton);
+        buttonAddSubject.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                DialogFragment dialog = new AddSubjecItemDialog();
+                dialog.show(getFragmentManager(), "DialogFragment");
+            }
+        });
+    }
 
     public void navigate(View root){
         View.OnClickListener s = Navigation.createNavigateOnClickListener(R.id.action_mainPageFragment_to_settingsFragment);

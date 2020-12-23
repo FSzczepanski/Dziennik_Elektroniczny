@@ -39,7 +39,11 @@ public class MainPageSubjectsAdapter extends RecyclerView.Adapter<MainPageSubjec
         final Subject currentItem = subjects.get(position);
         holder.name.setText(currentItem.getName());
         holder.UpdatedAt.setText(currentItem.getUpdatedAt().toString());
-        holder.grades.setText(currentItem.getGrades().toString());
+        String gradesConverted = "";
+        for(int g: currentItem.getGrades()){
+            gradesConverted += g+" ";
+        }
+        holder.grades.setText(gradesConverted);
 
     }
 

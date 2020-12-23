@@ -7,4 +7,6 @@
     <string name="email">email</string>
     <string name="AppName">Mój Dziennik</string>
     <string name="logout">Logout</string>
+    <string name="tvAdd">tvAdd</string>
+    <string name="tvCancel">tvCancel</string>
 </resources>
