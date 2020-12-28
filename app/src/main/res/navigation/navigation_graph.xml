@@ -22,7 +22,8 @@
         <action
             android:id="@+id/action_mainPageFragment_to_settingsFragment"
             app:destination="@id/settingsFragment"
-            app:enterAnim="@anim/nav_default_enter_anim"/>
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popUpTo="@+id/navigation_graph" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
@@ -31,6 +32,17 @@
         tools:layout="@layout/settings_fragment" >
         <action
             android:id="@+id/action_settingsFragment_to_authFraghemnt"
-            app:destination="@id/authFraghemnt" />
+            app:destination="@id/authFraghemnt"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/navigation_graph"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_settingsFragment_to_themeSettingsFragment"
+            app:destination="@id/themeSettingsFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/themeSettingsFragment"
+        android:name="com.example.dziennikelektroniczny.ui.settingsFragment.ThemeSettings.ThemeSettingsFragment"
+        android:label="theme_settings_fragment"
+        tools:layout="@layout/theme_settings_fragment" />
 </navigation>

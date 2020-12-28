@@ -45,4 +45,6 @@ public class MainPageViewModel extends ViewModel {
     public void deleteAllSubjects() {
         subjectsRepository.deleteAllSubjects();
     }
+
+
 }

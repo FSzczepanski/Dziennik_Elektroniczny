@@ -11,7 +11,7 @@ import com.example.dziennikelektroniczny.data.dao.SubjectDao;
 import com.example.dziennikelektroniczny.data.entities.Subject;
 import com.example.dziennikelektroniczny.data.utils.DataConverter;
 
-@androidx.room.Database(entities = {Subject.class}, version = 2, exportSchema = false)
+@androidx.room.Database(entities = {Subject.class}, version = 5, exportSchema = false)
 @TypeConverters(DataConverter.class)
 public abstract class Database extends RoomDatabase {
 
@@ -24,7 +24,7 @@ public abstract class Database extends RoomDatabase {
         if (instance == null) {
             Log.d(LOG_TAG, "Creating new database instance");
             instance = Room.databaseBuilder(context,
-                    Database.class, Database.DATABASE_NAME).fallbackToDestructiveMigration()
+                    Database.class, Database.DATABASE_NAME).fallbackToDestructiveMigration().allowMainThreadQueries()
                     .build();
         }
         Log.d(LOG_TAG, "Getting the database instance");

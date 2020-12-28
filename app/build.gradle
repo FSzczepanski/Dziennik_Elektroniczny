@@ -54,6 +54,7 @@ dependencies {
     annotationProcessor "androidx.room:room-compiler:$room_version"
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
+
     // Import the Firebase BoM
     implementation platform('com.google.firebase:firebase-bom:26.1.1')
     // dependencies for Firebase Authentication and Cloud Firestore

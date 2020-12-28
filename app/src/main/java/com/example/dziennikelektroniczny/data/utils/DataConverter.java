@@ -43,4 +43,26 @@ public class DataConverter {
         }
         return genreIds;
     }
+    @TypeConverter
+    public ArrayList<Float> gettingFloatListFromString(String genreIds) {
+        ArrayList<Float> list = new ArrayList<>();
+
+        String[] array = genreIds.split(",");
+
+        for (String s : array) {
+            if (!s.isEmpty()) {
+                list.add(Float.parseFloat(s));
+            }
+        }
+        return list;
+    }
+
+    @TypeConverter
+    public String writingFloatStringFromList(ArrayList<Float> subjects) {
+        String genreIds = "";
+        for (float i : subjects) {
+            genreIds += "," + i;
+        }
+        return genreIds;
+    }
 }
