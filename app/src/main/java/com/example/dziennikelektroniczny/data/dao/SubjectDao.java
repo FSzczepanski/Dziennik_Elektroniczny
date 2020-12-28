@@ -26,6 +26,6 @@ public interface SubjectDao {
     @Query("DELETE FROM subjects")
     void deleteAllSubjects();
 
-    @Query("SELECT * FROM subjects")
-    LiveData<List<Subject>> loadAllSubjects();
+    @Query("SELECT * FROM subjects where userId=:userId")
+    LiveData<List<Subject>> loadAllSubjects(String userId);
 }

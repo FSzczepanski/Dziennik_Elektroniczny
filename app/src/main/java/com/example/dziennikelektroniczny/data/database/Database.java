@@ -11,7 +11,7 @@ import com.example.dziennikelektroniczny.data.dao.SubjectDao;
 import com.example.dziennikelektroniczny.data.entities.Subject;
 import com.example.dziennikelektroniczny.data.utils.DataConverter;
 
-@androidx.room.Database(entities = {Subject.class}, version = 5, exportSchema = false)
+@androidx.room.Database(entities = {Subject.class}, version = 6, exportSchema = false)
 @TypeConverters(DataConverter.class)
 public abstract class Database extends RoomDatabase {
 

@@ -19,6 +19,7 @@ public class MainPageViewModel extends ViewModel {
     private SubjectsRepository subjectsRepository;
     private Database database;
     private Application application;
+    private String userId;
 
     public MainPageViewModel() {
 
@@ -28,9 +29,9 @@ public class MainPageViewModel extends ViewModel {
         subjectsRepository.insertSubject(subject);
     }
 
-    public LiveData<List<Subject>> getSubjects(Context context) {
+    public LiveData<List<Subject>> getSubjects(String userId,Context context) {
         subjectsRepository = new SubjectsRepository(context);
-        subjects = subjectsRepository.getloadAllSubjects();
+        subjects = subjectsRepository.getloadAllSubjects(userId);
         return subjects;
     }
 

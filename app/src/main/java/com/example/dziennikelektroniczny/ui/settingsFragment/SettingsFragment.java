@@ -15,9 +15,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.dziennikelektroniczny.R;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 
@@ -29,11 +31,19 @@ public class SettingsFragment extends Fragment {
         return new SettingsFragment();
     }
     private FirebaseAuth mAuth;
+    FirebaseUser currentUser;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.settings_fragment, container, false);
+
+        mAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+
+        TextView emailtext = root.findViewById(R.id.email);
+        emailtext.setText(currentUser.getEmail());
+
         navigateBack(root);
         navigateToThemeSettings(root);
         signOut(root);
@@ -76,7 +86,7 @@ public class SettingsFragment extends Fragment {
         logoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mAuth.getInstance().signOut();
+                FirebaseAuth.getInstance().signOut();
                 final NavController navController = Navigation.findNavController(getActivity(), R.id.my_nav_host_fragment);
                 navController.navigate(R.id.action_settingsFragment_to_authFraghemnt);
             }

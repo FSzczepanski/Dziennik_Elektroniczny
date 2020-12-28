@@ -1,6 +1,7 @@
 package com.example.dziennikelektroniczny.data.entities;
 
 import androidx.room.Entity;
+import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
 import com.google.common.collect.BiMap;
@@ -8,6 +9,8 @@ import com.google.common.collect.BiMap;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import static androidx.room.ForeignKey.CASCADE;
 
 @Entity(tableName = "subjects")
 public class Subject {
@@ -18,13 +21,15 @@ public class Subject {
     private Date updatedAt;
     private ArrayList<Float> grades;
     private int image;
+    private String userId;
 
-    public Subject(String name, Date updatedAt, ArrayList<Float> grades,int image) {
+    public Subject(String name, Date updatedAt, ArrayList<Float> grades,int image, String userId) {
         this.id=id;
         this.name = name;
         this.updatedAt = updatedAt;
         this.grades = grades;
         this.image = image;
+        this.userId = userId;
     }
 
     public int getImage() {
@@ -65,5 +70,13 @@ public class Subject {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 }

@@ -15,6 +15,8 @@ import com.example.dziennikelektroniczny.R;
 import com.example.dziennikelektroniczny.data.entities.Subject;
 import com.example.dziennikelektroniczny.ui.mainPageFragment.MainPageSubjectsAdapter;
 import com.example.dziennikelektroniczny.ui.mainPageFragment.MainPageViewModel;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -95,7 +97,11 @@ public class AddSubjectPictureDialog extends DialogFragment {
             }
         }
 
-        Subject subject = new Subject(name,date,gradesArray,image);
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        String userId = currentUser.getUid();
+
+        Subject subject = new Subject(name,date,gradesArray,image,userId);
         mViewModel.insertSubject(subject);
 
     }

@@ -49,7 +49,9 @@ public class AddSubjecItemDialog extends DialogFragment {
             public void onClick(View v) {
                 name = editTextname.getText().toString();
                 grades = editTextgrades.getText().toString();
-                if (!name.matches("")) {
+                String[] tab = grades.split(",");
+
+                if ((!name.matches("")) && tab.length>0) {
                     loadNextDialogAndPassData();
                 }
                 else{

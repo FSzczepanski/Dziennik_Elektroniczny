@@ -15,6 +15,7 @@ public class SubjectsRepository {
     private SubjectDao subjectDao;
     private Database database;
     private Context context;
+    private String userId;
 
     public SubjectsRepository(Context context) {
         this.context = context;
@@ -23,8 +24,8 @@ public class SubjectsRepository {
     public void insertSubject(Subject subject){
         database.subjectDao().insert(subject);
     }
-    public LiveData<List<Subject>> getloadAllSubjects(){
-        subjects = database.subjectDao().loadAllSubjects();
+    public LiveData<List<Subject>> getloadAllSubjects(String userId){
+        subjects = database.subjectDao().loadAllSubjects(userId);
         return subjects;
     }
 
