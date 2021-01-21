@@ -32,11 +32,11 @@ Dziennik elektroniczny jest aplikacją mobilną pozwalającą na dodawanie włas
 
 ![Untitled](https://user-images.githubusercontent.com/61236736/105410811-cb11e580-5c32-11eb-8a30-83914f7ee3b2.png)
 
-![Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%201.png](Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/61236736/105410813-cbaa7c00-5c32-11eb-8389-f472079d303e.png)
 
 ### Rejestracja i logowanie
 
-![Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%202.png](Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/61236736/105410814-cbaa7c00-5c32-11eb-808c-e4604844dbf5.png)
 
 Rejestracja oraz logowanie są maksymalnie uproszczone, po wpisaniu maila i hasła po naciśnięciu register rejestrujemy użytkownika, a następnie po naciśnięci login logujemy się.
 
@@ -200,15 +200,15 @@ public class AuthFraghemnt extends Fragment {
 
 ### Czysta, widok po rejestracji i pierwszym logowaniu
 
-![Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%203.png](Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/61236736/105410817-cc431280-5c32-11eb-80e1-1440d08c9a16.png)
 
 ### Strona główna, uzupełniona
 
-![Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%204.png](Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/61236736/105410818-ccdba900-5c32-11eb-8fbc-6ef41fdcb452.png)
 
 ### Ekran ustawień
 
-![Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%205.png](Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%205.png)
+![Untitled 5](https://user-images.githubusercontent.com/61236736/105410819-ccdba900-5c32-11eb-9ad5-dae153c9787f.png)
 
 ```java
 public class SettingsFragment extends Fragment {
@@ -285,9 +285,9 @@ public class SettingsFragment extends Fragment {
 
 ### Włączenie ciemnego motywu
 
-![Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%206.png](Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%206.png)
+![Untitled 6](https://user-images.githubusercontent.com/61236736/105410821-cd743f80-5c32-11eb-902d-0760df53bcc4.png)
 
-![Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%207.png](Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%207.png)
+![Untitled 7](https://user-images.githubusercontent.com/61236736/105410823-cd743f80-5c32-11eb-9e5a-0e40250c7caf.png)
 
 ```java
 public class ThemeSettingsFragment extends Fragment {
@@ -348,11 +348,11 @@ public class ThemeSettingsFragment extends Fragment {
 
 ## Powrót na strone główną
 
-![Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%208.png](Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%208.png)
+![Untitled 8](https://user-images.githubusercontent.com/61236736/105410824-cd743f80-5c32-11eb-9a6d-3014f5398c0f.png)
 
 ## Wyświetlanie średniej oraz mediany dla ucznia
 
-![Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%209.png](Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%209.png)
+![Untitled 9](https://user-images.githubusercontent.com/61236736/105410825-ce0cd600-5c32-11eb-86c9-dd1fea0dc6db.png)
 
 ```java
 private MainPageViewModel mViewModel;
@@ -810,17 +810,17 @@ public class MainPageSubjectsAdapter extends RecyclerView.Adapter<MainPageSubjec
 
 ### Układ projektu
 
-![Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%2010.png](Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%2010.png)
+![Untitled 10](https://user-images.githubusercontent.com/61236736/105410827-ce0cd600-5c32-11eb-8f7a-3144e3a0958b.png)
 
 ### Dodawanie przedmiotu
 
-![Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%2011.png](Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%2011.png)
+![Untitled 11](https://user-images.githubusercontent.com/61236736/105410828-cea56c80-5c32-11eb-9e8f-34bd3bbe22b1.png)
 
-![Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%2012.png](Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%2012.png)
+![Untitled 12](https://user-images.githubusercontent.com/61236736/105410830-cea56c80-5c32-11eb-99fb-acbe939669d3.png)
 
-![Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%2013.png](Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%2013.png)
+![Untitled 13](https://user-images.githubusercontent.com/61236736/105410831-cea56c80-5c32-11eb-9a73-3ed24d556a53.png)
 
-![Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%2014.png](Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%2014.png)
+![Untitled 14](https://user-images.githubusercontent.com/61236736/105410832-cf3e0300-5c32-11eb-9de1-f8ac1eab3d7b.png)
 
 ### Kod Dialogu pobierającego dane przedmiotu:
 
@@ -978,9 +978,9 @@ public class AddSubjectPictureDialog extends DialogFragment {
 
 ### Edycja przedmiotu
 
-![Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%2015.png](Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%2015.png)
+![Untitled 15](https://user-images.githubusercontent.com/61236736/105410804-c9e0b880-5c32-11eb-896c-8cc28d3c66c0.png)
 
-![Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%2016.png](Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%2016.png)
+![Untitled 16](https://user-images.githubusercontent.com/61236736/105410806-ca794f00-5c32-11eb-8ee6-a54232619d50.png)
 
 ### Kod dialogu edycji przedmiotu:
 
@@ -1076,9 +1076,9 @@ public class EditSubjectItemDialog extends DialogFragment{
 
 ### Usuwanie przedmiotów
 
-![Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%2017.png](Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%2017.png)
+![Untitled 17](https://user-images.githubusercontent.com/61236736/105410808-ca794f00-5c32-11eb-9e77-b5ea3832d9ec.png)
 
-![Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%2018.png](Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%2018.png)
+![Untitled 18](https://user-images.githubusercontent.com/61236736/105410809-cb11e580-5c32-11eb-9f03-d5c07909eccd.png)
 
 ## MVVM pattern
 
