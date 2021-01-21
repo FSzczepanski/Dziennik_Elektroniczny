@@ -3,8 +3,9 @@
 * made to practice Firebase authentication
 * made to practice **MVVM approach** 
 * Written in **Java**
-# Dziennik Elektroniczny
 
+
+# Dokumentacja na zajęcia:
 
 # Aplikacja mobilna, Android Studio + Java, MVVM Pattern, Firebase authentication
 
@@ -29,7 +30,7 @@ Dziennik elektroniczny jest aplikacją mobilną pozwalającą na dodawanie włas
 
 ### Walidacja logowania
 
-![Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled.png](Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/61236736/105410811-cb11e580-5c32-11eb-8a30-83914f7ee3b2.png)
 
 ![Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%201.png](Dziennik%20Elektroniczny%20050cd1b526fb4968b3d6b7099799c641/Untitled%201.png)
 
