@@ -19,8 +19,8 @@
 
 **Osoby** **tworzące** **projekt**:
 
-- Filip Szczepański  – 269391
-- Mateusz Sobczyk  - 269396
+- Filip Szczepański  
+- Mateusz Sobczyk  
 
 # Cel projektu
 
@@ -484,119 +484,6 @@ public void countAvg(ArrayList<Subject> subjects, View view) {
 }
 ```
 
-### Adapter dla przedmiotów, to on odpowiada za wyświetlanie, edycje oraz usuwanie przedmiotów
-
-```java
-public class MainPageSubjectsAdapter extends RecyclerView.Adapter<MainPageSubjectsAdapter.MyViewHolder> {
-    Context context;
-    private List<Subject> subjects;
-    private MainPageViewModel mViewModel;
-    private DialogFragment dialog;
-
-    @NonNull
-    @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.subject_row,parent,false);
-        return new MainPageSubjectsAdapter.MyViewHolder(view);
-    }
-
-    public MainPageSubjectsAdapter(Context context, ArrayList<Subject> subjects, MainPageViewModel mViewModel) {
-        this.context = context;
-        this.subjects = subjects;
-        this.mViewModel = mViewModel;
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        final Subject currentItem = subjects.get(position);
-        holder.name.setText(currentItem.getName());
-
-        String myDate = convertDate(currentItem);
-        holder.UpdatedAt.setText(myDate);
-
-        String gradesConverted = convertGrades(currentItem);
-        holder.grades.setText(gradesConverted);
-
-        switch(currentItem.getImage()) {
-            case 1:
-                holder.myImage.setImageResource(R.drawable.z1);
-                break;
-            case 2:
-                holder.myImage.setImageResource(R.drawable.z2);
-                break;
-            case 3:
-                holder.myImage.setImageResource(R.drawable.z3);
-                break;
-            case 4:
-                holder.myImage.setImageResource(R.drawable.z4);
-                break;
-            default:
-                // code block
-        }
-
-        holder.deleteButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mViewModel.deleteSubject(currentItem);
-            }
-        });
-
-        holder.editButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog = new EditSubjectItemDialog(mViewModel,currentItem);
-                dialog.show(((AppCompatActivity)context).getSupportFragmentManager(), "DialogFragment");
-            }
-        });
-    }
-
-    @Override
-    public int getItemCount() {
-        return subjects.size();
-    }
-
-    private String convertDate(Subject currentItem){
-        String date = currentItem.getUpdatedAt().toString();
-        String[] tab = date.split("G");
-        return tab[0];
-    }
-
-    private String convertGrades(Subject currentItem){
-        String gradesConverted = "";
-
-        for(float g: currentItem.getGrades()){
-            String[] tab = Float.toString(g).split("");
-            if (tab[2].equals("0")){
-                gradesConverted +=tab[0]+"  ";
-            }
-            else{
-                gradesConverted += g+"  ";
-            }
-
-        }
-        return gradesConverted;
-    }
-
-    public class MyViewHolder extends RecyclerView.ViewHolder {
-
-        TextView name, UpdatedAt, grades;
-        ImageView myImage;
-        ImageButton deleteButton;
-        FloatingActionButton editButton;
-
-        public MyViewHolder(@NonNull View itemView) {
-            super(itemView);
-            name = itemView.findViewById(R.id.name);
-            UpdatedAt = itemView.findViewById(R.id.updatedAt);
-            grades = itemView.findViewById(R.id.grades);
-            myImage = itemView.findViewById(R.id.myImageview);
-            deleteButton = itemView.findViewById(R.id.deleteButton);
-            editButton = itemView.findViewById(R.id.editButton);
-        }
-    }
-}
-```
 
 ### Klasa widoku Strony głównej
 
@@ -975,6 +862,121 @@ public class AddSubjectPictureDialog extends DialogFragment {
 
 }
 ```
+
+### Adapter dla przedmiotów, to on odpowiada za wyświetlanie, edycje oraz usuwanie przedmiotów
+
+```java
+public class MainPageSubjectsAdapter extends RecyclerView.Adapter<MainPageSubjectsAdapter.MyViewHolder> {
+    Context context;
+    private List<Subject> subjects;
+    private MainPageViewModel mViewModel;
+    private DialogFragment dialog;
+
+    @NonNull
+    @Override
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View view = inflater.inflate(R.layout.subject_row,parent,false);
+        return new MainPageSubjectsAdapter.MyViewHolder(view);
+    }
+
+    public MainPageSubjectsAdapter(Context context, ArrayList<Subject> subjects, MainPageViewModel mViewModel) {
+        this.context = context;
+        this.subjects = subjects;
+        this.mViewModel = mViewModel;
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        final Subject currentItem = subjects.get(position);
+        holder.name.setText(currentItem.getName());
+
+        String myDate = convertDate(currentItem);
+        holder.UpdatedAt.setText(myDate);
+
+        String gradesConverted = convertGrades(currentItem);
+        holder.grades.setText(gradesConverted);
+
+        switch(currentItem.getImage()) {
+            case 1:
+                holder.myImage.setImageResource(R.drawable.z1);
+                break;
+            case 2:
+                holder.myImage.setImageResource(R.drawable.z2);
+                break;
+            case 3:
+                holder.myImage.setImageResource(R.drawable.z3);
+                break;
+            case 4:
+                holder.myImage.setImageResource(R.drawable.z4);
+                break;
+            default:
+                // code block
+        }
+
+        holder.deleteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mViewModel.deleteSubject(currentItem);
+            }
+        });
+
+        holder.editButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog = new EditSubjectItemDialog(mViewModel,currentItem);
+                dialog.show(((AppCompatActivity)context).getSupportFragmentManager(), "DialogFragment");
+            }
+        });
+    }
+
+    @Override
+    public int getItemCount() {
+        return subjects.size();
+    }
+
+    private String convertDate(Subject currentItem){
+        String date = currentItem.getUpdatedAt().toString();
+        String[] tab = date.split("G");
+        return tab[0];
+    }
+
+    private String convertGrades(Subject currentItem){
+        String gradesConverted = "";
+
+        for(float g: currentItem.getGrades()){
+            String[] tab = Float.toString(g).split("");
+            if (tab[2].equals("0")){
+                gradesConverted +=tab[0]+"  ";
+            }
+            else{
+                gradesConverted += g+"  ";
+            }
+
+        }
+        return gradesConverted;
+    }
+
+    public class MyViewHolder extends RecyclerView.ViewHolder {
+
+        TextView name, UpdatedAt, grades;
+        ImageView myImage;
+        ImageButton deleteButton;
+        FloatingActionButton editButton;
+
+        public MyViewHolder(@NonNull View itemView) {
+            super(itemView);
+            name = itemView.findViewById(R.id.name);
+            UpdatedAt = itemView.findViewById(R.id.updatedAt);
+            grades = itemView.findViewById(R.id.grades);
+            myImage = itemView.findViewById(R.id.myImageview);
+            deleteButton = itemView.findViewById(R.id.deleteButton);
+            editButton = itemView.findViewById(R.id.editButton);
+        }
+    }
+}
+```
+
 
 ### Edycja przedmiotu
 
